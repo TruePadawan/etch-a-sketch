@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*::before,*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    background: coral;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.gridUnit {
+    background-color: antiquewhite;
+    width: calc(100%/16);
+    height: calc(100%/16);
+    outline: 1px solid black;
+    
+}
