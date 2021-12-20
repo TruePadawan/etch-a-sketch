@@ -10,9 +10,10 @@
 <body>
     <header>Etch-A-Sketch</header>
     <main>
-        <button onclick="clearGrid();" class="reset-button">Reset</button>
-        <div class="container">
-
+        <div class="container"></div>
+        <div class="buttons">
+            <button onclick="clearGrid();" class="reset-button">Reset</button>
+            <button data-active="off" id="eraser" onclick="eraserHandler();">Eraser</button> 
         </div>
     </main>
 </body>
