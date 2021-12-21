@@ -10,20 +10,18 @@ function generateRandomColor()
   return `rgb(${r},${g},${b})`;
 }
 
-function clearGrid()
-{
-    while(container.firstChild)
-    {
-        container.removeChild(container.firstChild);
+function clearGrid() {
+  let NUM_OF_SQUARE_PER_SIDE = Number(document.getElementById("grid-size-input").value);
+  
+  // CLEAR THE SQUARES IN THE SKETCH-AREA IF THE ACCEPTED VAL IS <= 100
+  if (NUM_OF_SQUARE_PER_SIDE <= 100)
+  {
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
     }
-    let NUM_OF_SQUARE = prompt("Number of squares per side? (<=100)");
-    
-    while(NUM_OF_SQUARE > 100)
-    {
-        NUM_OF_SQUARE = prompt("Number of squares per side? (<=100)");
-    }
-
-    generateGridLayout(NUM_OF_SQUARE);
+    generateGridLayout(NUM_OF_SQUARE_PER_SIDE);
+  }
+  
 }
 
 
