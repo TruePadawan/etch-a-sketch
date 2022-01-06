@@ -13,8 +13,8 @@ function generateRandomColor()
 function clearGrid() {
   let NUM_OF_SQUARE_PER_SIDE = Number(document.getElementById("grid-size-input").value);
   
-  // CLEAR THE SQUARES IN THE SKETCH-AREA IF THE ACCEPTED VAL IS <= 100
-  if (NUM_OF_SQUARE_PER_SIDE <= 100)
+  // CLEAR THE SQUARES IN THE SKETCH-AREA IF THE ACCEPTED VAL IS VALID
+  if (NUM_OF_SQUARE_PER_SIDE > 0 && NUM_OF_SQUARE_PER_SIDE <= 100)
   {
     while (container.firstChild) {
       container.removeChild(container.firstChild);
